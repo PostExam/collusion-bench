@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "questions.json",
+  "type": "object",
+  "required": [
+    "scenario",
+    "questions"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "scenario": {
+      "type": "string"
+    },
+    "questions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "header",
+          "type"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^q[0-9]+$"
+          },
+          "header": {
+            "type": "string"
+          },
+          "type": {
+            "enum": [
+              "text",
+              "mcq",
+              "code"
+            ]
+          },
+          "prompt": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "choices": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 2
+          },
+          "answer_key": {
+            "type": "string"
+          },
+          "language": {
+            "type": "string"
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "mcq"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "choices",
+                "answer_key"
+              ]
+            }
+          },
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "code"
+                }
+              }
+            },
+            "then": {
+              "required": [
+                "language"
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

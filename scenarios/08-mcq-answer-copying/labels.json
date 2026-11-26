@@ -1,0 +1,150 @@
+{
+  "scenario": "08-mcq-answer-copying",
+  "default": {
+    "relation": "independent",
+    "ground_truth": "not_copied"
+  },
+  "participants": [
+    {
+      "id": "S01",
+      "role": "student",
+      "source_name": "MCQ_Student_11"
+    },
+    {
+      "id": "S02",
+      "role": "student",
+      "source_name": "MCQ_Student_02"
+    },
+    {
+      "id": "S03",
+      "role": "student",
+      "source_name": "MCQ_Student_04"
+    },
+    {
+      "id": "S04",
+      "role": "student",
+      "source_name": "MCQ_Student_08"
+    },
+    {
+      "id": "S05",
+      "role": "student",
+      "source_name": "MCQ_Ring_3"
+    },
+    {
+      "id": "S06",
+      "role": "student",
+      "source_name": "MCQ_Student_14"
+    },
+    {
+      "id": "S07",
+      "role": "student",
+      "source_name": "MCQ_Student_03"
+    },
+    {
+      "id": "S08",
+      "role": "student",
+      "source_name": "MCQ_Student_01"
+    },
+    {
+      "id": "S09",
+      "role": "student",
+      "source_name": "MCQ_Copier_B"
+    },
+    {
+      "id": "S10",
+      "role": "student",
+      "source_name": "MCQ_Student_05"
+    },
+    {
+      "id": "S11",
+      "role": "student",
+      "source_name": "MCQ_Student_09"
+    },
+    {
+      "id": "S12",
+      "role": "student",
+      "source_name": "MCQ_Student_15"
+    },
+    {
+      "id": "S13",
+      "role": "student",
+      "source_name": "MCQ_Student_07"
+    },
+    {
+      "id": "S14",
+      "role": "student",
+      "source_name": "MCQ_Student_13"
+    },
+    {
+      "id": "S15",
+      "role": "student",
+      "source_name": "MCQ_Copier_A"
+    },
+    {
+      "id": "S16",
+      "role": "student",
+      "source_name": "MCQ_Ring_2"
+    },
+    {
+      "id": "S17",
+      "role": "student",
+      "source_name": "MCQ_Ring_1"
+    },
+    {
+      "id": "S18",
+      "role": "student",
+      "source_name": "MCQ_Student_06"
+    },
+    {
+      "id": "S19",
+      "role": "student",
+      "source_name": "MCQ_Student_10"
+    },
+    {
+      "id": "S20",
+      "role": "student",
+      "source_name": "MCQ_Student_12"
+    }
+  ],
+  "relations": [
+    {
+      "members": [
+        "S15",
+        "S09"
+      ],
+      "relation": "mcq_copy",
+      "ground_truth": "copied",
+      "note": "B copied A's answers, wrong ones included (generator copy rate 0.9).",
+      "source": "S15"
+    },
+    {
+      "members": [
+        "S17",
+        "S16"
+      ],
+      "relation": "mcq_copy",
+      "ground_truth": "copied",
+      "note": "Ring_2 copied Ring_1's answers (generator copy rate 0.85).",
+      "source": "S17"
+    },
+    {
+      "members": [
+        "S17",
+        "S05"
+      ],
+      "relation": "mcq_copy",
+      "ground_truth": "copied",
+      "note": "Ring_3 copied Ring_1's answers (generator copy rate 0.85).",
+      "source": "S17"
+    },
+    {
+      "members": [
+        "S16",
+        "S05"
+      ],
+      "relation": "mcq_shared_source",
+      "ground_truth": "shared_source",
+      "note": "Both copied Ring_1; no evidence of copying each other."
+    }
+  ]
+}

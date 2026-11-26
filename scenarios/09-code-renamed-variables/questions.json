@@ -1,0 +1,12 @@
+{
+  "scenario": "09-code-renamed-variables",
+  "questions": [
+    {
+      "id": "q1",
+      "header": "Write a Python function most_common_word(text) that returns the word that appears most often in a text.",
+      "type": "code",
+      "prompt": "Write a Python function most_common_word(text) that returns the word that appears most often in a text.",
+      "language": "python"
+    }
+  ]
+}

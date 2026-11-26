@@ -1,0 +1,365 @@
+{
+  "scenario": "08-mcq-answer-copying",
+  "questions": [
+    {
+      "id": "q1",
+      "header": "Q1",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "C"
+    },
+    {
+      "id": "q2",
+      "header": "Q2",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "C"
+    },
+    {
+      "id": "q3",
+      "header": "Q3",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "D"
+    },
+    {
+      "id": "q4",
+      "header": "Q4",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "A"
+    },
+    {
+      "id": "q5",
+      "header": "Q5",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "C"
+    },
+    {
+      "id": "q6",
+      "header": "Q6",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "B"
+    },
+    {
+      "id": "q7",
+      "header": "Q7",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "C"
+    },
+    {
+      "id": "q8",
+      "header": "Q8",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "D"
+    },
+    {
+      "id": "q9",
+      "header": "Q9",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "B"
+    },
+    {
+      "id": "q10",
+      "header": "Q10",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "B"
+    },
+    {
+      "id": "q11",
+      "header": "Q11",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "A"
+    },
+    {
+      "id": "q12",
+      "header": "Q12",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "A"
+    },
+    {
+      "id": "q13",
+      "header": "Q13",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "B"
+    },
+    {
+      "id": "q14",
+      "header": "Q14",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "C"
+    },
+    {
+      "id": "q15",
+      "header": "Q15",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "B"
+    },
+    {
+      "id": "q16",
+      "header": "Q16",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "D"
+    },
+    {
+      "id": "q17",
+      "header": "Q17",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "B"
+    },
+    {
+      "id": "q18",
+      "header": "Q18",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "A"
+    },
+    {
+      "id": "q19",
+      "header": "Q19",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "A"
+    },
+    {
+      "id": "q20",
+      "header": "Q20",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "D"
+    },
+    {
+      "id": "q21",
+      "header": "Q21",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "A"
+    },
+    {
+      "id": "q22",
+      "header": "Q22",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "C"
+    },
+    {
+      "id": "q23",
+      "header": "Q23",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "A"
+    },
+    {
+      "id": "q24",
+      "header": "Q24",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "A"
+    },
+    {
+      "id": "q25",
+      "header": "Q25",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "A"
+    },
+    {
+      "id": "q26",
+      "header": "Q26",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "B"
+    },
+    {
+      "id": "q27",
+      "header": "Q27",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "C"
+    },
+    {
+      "id": "q28",
+      "header": "Q28",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "D"
+    },
+    {
+      "id": "q29",
+      "header": "Q29",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "B"
+    },
+    {
+      "id": "q30",
+      "header": "Q30",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "C"
+    }
+  ]
+}

@@ -1,0 +1,151 @@
+{
+  "scenario": "10-mixed-exam",
+  "questions": [
+    {
+      "id": "q1",
+      "header": "Which part of a plant cell carries out photosynthesis? A) Mitochondrion  B) Chloroplast  C) Nucleus  D) Ribosome",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "B"
+    },
+    {
+      "id": "q2",
+      "header": "Which gas do plants take in for photosynthesis? A) Oxygen  B) Nitrogen  C) Carbon dioxide  D) Hydrogen",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "C"
+    },
+    {
+      "id": "q3",
+      "header": "What is the chemical name of table salt? A) Sodium chloride  B) Potassium chloride  C) Calcium carbonate  D) Sodium hydroxide",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "A"
+    },
+    {
+      "id": "q4",
+      "header": "Which planet is closest to the Sun? A) Venus  B) Earth  C) Mars  D) Mercury",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "D"
+    },
+    {
+      "id": "q5",
+      "header": "What is the capital of Australia? A) Sydney  B) Canberra  C) Melbourne  D) Perth",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "B"
+    },
+    {
+      "id": "q6",
+      "header": "Which organ pumps blood around the body? A) Liver  B) Lung  C) Heart  D) Kidney",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "C"
+    },
+    {
+      "id": "q7",
+      "header": "What is 7 x 8? A) 54  B) 56  C) 58  D) 64",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "B"
+    },
+    {
+      "id": "q8",
+      "header": "Which force pulls objects toward the Earth? A) Friction  B) Magnetism  C) Gravity  D) Tension",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "C"
+    },
+    {
+      "id": "q9",
+      "header": "Who wrote the play Romeo and Juliet? A) Charles Dickens  B) William Shakespeare  C) Jane Austen  D) Mark Twain",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "B"
+    },
+    {
+      "id": "q10",
+      "header": "At sea level, water boils at what temperature? A) 90 C  B) 100 C  C) 110 C  D) 120 C",
+      "type": "mcq",
+      "choices": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "answer_key": "B"
+    },
+    {
+      "id": "q11",
+      "header": "Explain why the daytime sky looks blue.",
+      "type": "text",
+      "prompt": "Explain why the daytime sky looks blue."
+    },
+    {
+      "id": "q12",
+      "header": "Describe one cause of the French Revolution.",
+      "type": "text",
+      "prompt": "Describe one cause of the French Revolution."
+    },
+    {
+      "id": "q13",
+      "header": "Write a Python function most_common_word(text) that returns the word that appears most often in a text.",
+      "type": "code",
+      "prompt": "Write a Python function most_common_word(text) that returns the word that appears most often in a text.",
+      "language": "python"
+    },
+    {
+      "id": "q14",
+      "header": "Write a Python function sum_even(numbers) that returns the sum of the even numbers in a list.",
+      "type": "code",
+      "prompt": "Write a Python function sum_even(numbers) that returns the sum of the even numbers in a list.",
+      "language": "python"
+    }
+  ]
+}

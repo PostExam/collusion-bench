@@ -1,0 +1,11 @@
+{
+  "scenario": "07-ai-derived-answers",
+  "questions": [
+    {
+      "id": "q1",
+      "header": "Explain how photosynthesis works.",
+      "type": "text",
+      "prompt": "Explain how photosynthesis works."
+    }
+  ]
+}

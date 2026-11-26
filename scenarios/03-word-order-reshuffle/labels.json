@@ -1,0 +1,65 @@
+{
+  "scenario": "03-word-order-reshuffle",
+  "default": {
+    "relation": "independent",
+    "ground_truth": "not_copied"
+  },
+  "participants": [
+    {
+      "id": "S01",
+      "role": "student",
+      "source_name": "Shingle_Scrambled_A"
+    },
+    {
+      "id": "S02",
+      "role": "student",
+      "source_name": "Shingle_Control_5"
+    },
+    {
+      "id": "S03",
+      "role": "student",
+      "source_name": "Shingle_Control_1"
+    },
+    {
+      "id": "S04",
+      "role": "student",
+      "source_name": "Shingle_Control_3"
+    },
+    {
+      "id": "S05",
+      "role": "student",
+      "source_name": "Shingle_Control_2"
+    },
+    {
+      "id": "S06",
+      "role": "student",
+      "source_name": "Shingle_Control_7"
+    },
+    {
+      "id": "S07",
+      "role": "student",
+      "source_name": "Shingle_Scrambled_B"
+    },
+    {
+      "id": "S08",
+      "role": "student",
+      "source_name": "Shingle_Control_4"
+    },
+    {
+      "id": "S09",
+      "role": "student",
+      "source_name": "Shingle_Control_6"
+    }
+  ],
+  "relations": [
+    {
+      "members": [
+        "S01",
+        "S07"
+      ],
+      "relation": "reordered_words",
+      "ground_truth": "copied",
+      "note": "Nearly the same words rearranged into different sentences."
+    }
+  ]
+}

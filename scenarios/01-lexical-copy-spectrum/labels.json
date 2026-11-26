@@ -1,0 +1,113 @@
+{
+  "scenario": "01-lexical-copy-spectrum",
+  "default": {
+    "relation": "independent",
+    "ground_truth": "not_copied"
+  },
+  "participants": [
+    {
+      "id": "S01",
+      "role": "student",
+      "source_name": "Lex_Control_6"
+    },
+    {
+      "id": "S02",
+      "role": "student",
+      "source_name": "Lex_PartialOverlap_B"
+    },
+    {
+      "id": "S03",
+      "role": "student",
+      "source_name": "Lex_PartialOverlap_A"
+    },
+    {
+      "id": "S04",
+      "role": "student",
+      "source_name": "Lex_EditedCopy_A"
+    },
+    {
+      "id": "S05",
+      "role": "student",
+      "source_name": "Lex_Control_5"
+    },
+    {
+      "id": "S06",
+      "role": "student",
+      "source_name": "Lex_Control_4"
+    },
+    {
+      "id": "S07",
+      "role": "student",
+      "source_name": "Lex_Control_2"
+    },
+    {
+      "id": "S08",
+      "role": "student",
+      "source_name": "Lex_Control_1"
+    },
+    {
+      "id": "S09",
+      "role": "student",
+      "source_name": "Lex_Control_3"
+    },
+    {
+      "id": "S10",
+      "role": "student",
+      "source_name": "Lex_ExactCopy_B"
+    },
+    {
+      "id": "S11",
+      "role": "student",
+      "source_name": "Lex_EditedCopy_B"
+    },
+    {
+      "id": "S12",
+      "role": "student",
+      "source_name": "Lex_ExactCopy_A"
+    }
+  ],
+  "relations": [
+    {
+      "members": [
+        "S12",
+        "S10"
+      ],
+      "relation": "verbatim_copy",
+      "ground_truth": "copied",
+      "note": "Identical text."
+    },
+    {
+      "members": [
+        "S04",
+        "S11"
+      ],
+      "relation": "verbatim_copy",
+      "ground_truth": "copied",
+      "note": "Identical to each other (both carry the same edited text)."
+    },
+    {
+      "between": [
+        [
+          "S12",
+          "S10"
+        ],
+        [
+          "S04",
+          "S11"
+        ]
+      ],
+      "relation": "light_edit_copy",
+      "ground_truth": "copied",
+      "note": "The edited text is the original with a few words changed."
+    },
+    {
+      "members": [
+        "S03",
+        "S02"
+      ],
+      "relation": "partial_overlap",
+      "ground_truth": "partial",
+      "note": "Share an opening sentence inside otherwise different answers."
+    }
+  ]
+}

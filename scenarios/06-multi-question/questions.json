@@ -1,0 +1,29 @@
+{
+  "scenario": "06-multi-question",
+  "questions": [
+    {
+      "id": "q1",
+      "header": "Explain why the daytime sky looks blue.",
+      "type": "text",
+      "prompt": "Explain why the daytime sky looks blue."
+    },
+    {
+      "id": "q2",
+      "header": "Describe one cause of the French Revolution.",
+      "type": "text",
+      "prompt": "Describe one cause of the French Revolution."
+    },
+    {
+      "id": "q3",
+      "header": "What is inflation?",
+      "type": "text",
+      "prompt": "What is inflation?"
+    },
+    {
+      "id": "q4",
+      "header": "Describe one role of the mitochondria in a cell.",
+      "type": "text",
+      "prompt": "Describe one role of the mitochondria in a cell."
+    }
+  ]
+}

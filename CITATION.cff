@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this dataset, please cite it as below."
+title: "Post-Exam Collusion Analysis Benchmark (collusion-bench)"
+type: dataset
+version: 0.1.0
+date-released: 2026-11-26
+license: CC-BY-4.0
+authors:
+  - name: "PostExam contributors"
+repository-code: "https://github.com/PostExam/collusion-bench"
+abstract: "Synthetic, labelled exam answer sets for testing methods that look for collusion after an exam has been taken."
+keywords:
+  - academic integrity
+  - collusion detection
+  - answer copying
+  - benchmark

@@ -1,0 +1,98 @@
+{
+  "scenario": "06-multi-question",
+  "default": {
+    "relation": "independent",
+    "ground_truth": "not_copied"
+  },
+  "participants": [
+    {
+      "id": "S01",
+      "role": "student",
+      "source_name": "MultiQ_MatchBoth_A"
+    },
+    {
+      "id": "S02",
+      "role": "student",
+      "source_name": "MultiQ_Control_4"
+    },
+    {
+      "id": "S03",
+      "role": "student",
+      "source_name": "MultiQ_Control_1"
+    },
+    {
+      "id": "S04",
+      "role": "student",
+      "source_name": "MultiQ_MatchQ2Only_A"
+    },
+    {
+      "id": "S05",
+      "role": "student",
+      "source_name": "MultiQ_MatchQ1Only_B"
+    },
+    {
+      "id": "S06",
+      "role": "student",
+      "source_name": "MultiQ_Control_3"
+    },
+    {
+      "id": "S07",
+      "role": "student",
+      "source_name": "MultiQ_Control_2"
+    },
+    {
+      "id": "S08",
+      "role": "student",
+      "source_name": "MultiQ_MatchQ2Only_B"
+    },
+    {
+      "id": "S09",
+      "role": "student",
+      "source_name": "MultiQ_MatchQ1Only_A"
+    },
+    {
+      "id": "S10",
+      "role": "student",
+      "source_name": "MultiQ_MatchBoth_B"
+    }
+  ],
+  "relations": [
+    {
+      "members": [
+        "S09",
+        "S05"
+      ],
+      "relation": "verbatim_copy",
+      "ground_truth": "copied",
+      "note": "Share a long passage on question 1 only.",
+      "questions": [
+        "q1"
+      ]
+    },
+    {
+      "members": [
+        "S04",
+        "S08"
+      ],
+      "relation": "verbatim_copy",
+      "ground_truth": "copied",
+      "note": "Share a long passage on question 2 only.",
+      "questions": [
+        "q2"
+      ]
+    },
+    {
+      "members": [
+        "S01",
+        "S10"
+      ],
+      "relation": "light_edit_copy",
+      "ground_truth": "copied",
+      "note": "Near-identical on questions 1 and 2.",
+      "questions": [
+        "q1",
+        "q2"
+      ]
+    }
+  ]
+}

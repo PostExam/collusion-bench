@@ -1,0 +1,94 @@
+{
+  "scenario": "02-semantic-paraphrase",
+  "default": {
+    "relation": "independent",
+    "ground_truth": "not_copied"
+  },
+  "participants": [
+    {
+      "id": "S01",
+      "role": "student",
+      "source_name": "Sem_Unrelated_B"
+    },
+    {
+      "id": "S02",
+      "role": "student",
+      "source_name": "Sem_Unrelated_A"
+    },
+    {
+      "id": "S03",
+      "role": "student",
+      "source_name": "Sem_ExactCopy_A"
+    },
+    {
+      "id": "S04",
+      "role": "student",
+      "source_name": "Sem_Control_2"
+    },
+    {
+      "id": "S05",
+      "role": "student",
+      "source_name": "Sem_Paraphrase_A"
+    },
+    {
+      "id": "S06",
+      "role": "student",
+      "source_name": "Sem_Control_4"
+    },
+    {
+      "id": "S07",
+      "role": "student",
+      "source_name": "Sem_ExactCopy_B"
+    },
+    {
+      "id": "S08",
+      "role": "student",
+      "source_name": "Sem_Paraphrase_B"
+    },
+    {
+      "id": "S09",
+      "role": "student",
+      "source_name": "Sem_Control_1"
+    },
+    {
+      "id": "S10",
+      "role": "student",
+      "source_name": "Sem_Control_3"
+    }
+  ],
+  "relations": [
+    {
+      "members": [
+        "S03",
+        "S07"
+      ],
+      "relation": "verbatim_copy",
+      "ground_truth": "copied",
+      "note": "Identical text."
+    },
+    {
+      "members": [
+        "S05",
+        "S08"
+      ],
+      "relation": "paraphrase",
+      "ground_truth": "copied",
+      "note": "Same meaning in almost entirely different words."
+    },
+    {
+      "between": [
+        [
+          "S03",
+          "S07"
+        ],
+        [
+          "S05",
+          "S08"
+        ]
+      ],
+      "relation": "paraphrase",
+      "ground_truth": "copied",
+      "note": "The paraphrases restate the verbatim pair's text in different words."
+    }
+  ]
+}

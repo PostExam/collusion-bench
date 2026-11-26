@@ -1,0 +1,109 @@
+{
+  "scenario": "09-code-renamed-variables",
+  "default": {
+    "relation": "independent",
+    "ground_truth": "not_copied"
+  },
+  "participants": [
+    {
+      "id": "S01",
+      "role": "student",
+      "source_name": "Code_Lambda_L"
+    },
+    {
+      "id": "S02",
+      "role": "student",
+      "source_name": "Code_Reordered_D"
+    },
+    {
+      "id": "S03",
+      "role": "student",
+      "source_name": "Code_Recursive_K"
+    },
+    {
+      "id": "S04",
+      "role": "student",
+      "source_name": "Code_Sorted_F"
+    },
+    {
+      "id": "S05",
+      "role": "student",
+      "source_name": "Code_Counter_E"
+    },
+    {
+      "id": "S06",
+      "role": "student",
+      "source_name": "Code_Regex_I"
+    },
+    {
+      "id": "S07",
+      "role": "student",
+      "source_name": "Code_Max_G"
+    },
+    {
+      "id": "S08",
+      "role": "student",
+      "source_name": "Code_While_J"
+    },
+    {
+      "id": "S09",
+      "role": "student",
+      "source_name": "Code_Renamed_B"
+    },
+    {
+      "id": "S10",
+      "role": "student",
+      "source_name": "Code_Pairs_H"
+    },
+    {
+      "id": "S11",
+      "role": "student",
+      "source_name": "Code_Original_A"
+    },
+    {
+      "id": "S12",
+      "role": "student",
+      "source_name": "Code_Reformatted_C"
+    }
+  ],
+  "relations": [
+    {
+      "members": [
+        "S11",
+        "S09"
+      ],
+      "relation": "code_renamed",
+      "ground_truth": "copied",
+      "note": "Same program with every name changed."
+    },
+    {
+      "between": [
+        [
+          "S11",
+          "S09"
+        ],
+        [
+          "S12"
+        ]
+      ],
+      "relation": "code_reformatted",
+      "ground_truth": "copied",
+      "note": "Same program with new names, different comments and spacing."
+    },
+    {
+      "between": [
+        [
+          "S11",
+          "S09",
+          "S12"
+        ],
+        [
+          "S02"
+        ]
+      ],
+      "relation": "code_reordered",
+      "ground_truth": "copied",
+      "note": "Same logic with statements reordered."
+    }
+  ]
+}

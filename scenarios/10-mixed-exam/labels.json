@@ -1,0 +1,140 @@
+{
+  "scenario": "10-mixed-exam",
+  "default": {
+    "relation": "independent",
+    "ground_truth": "not_copied"
+  },
+  "participants": [
+    {
+      "id": "S01",
+      "role": "student",
+      "source_name": "Mixed_Reworded_C"
+    },
+    {
+      "id": "S02",
+      "role": "student",
+      "source_name": "Mixed_Student_02"
+    },
+    {
+      "id": "S03",
+      "role": "student",
+      "source_name": "Mixed_Copier_A"
+    },
+    {
+      "id": "S04",
+      "role": "student",
+      "source_name": "Mixed_Student_05"
+    },
+    {
+      "id": "S05",
+      "role": "student",
+      "source_name": "Mixed_Student_03"
+    },
+    {
+      "id": "S06",
+      "role": "student",
+      "source_name": "Mixed_Student_04"
+    },
+    {
+      "id": "S07",
+      "role": "student",
+      "source_name": "Mixed_Student_06"
+    },
+    {
+      "id": "S08",
+      "role": "student",
+      "source_name": "Mixed_Copier_B"
+    },
+    {
+      "id": "S09",
+      "role": "student",
+      "source_name": "Mixed_Student_01"
+    },
+    {
+      "id": "S10",
+      "role": "student",
+      "source_name": "Mixed_Student_07"
+    },
+    {
+      "id": "S11",
+      "role": "student",
+      "source_name": "Mixed_Student_08"
+    }
+  ],
+  "relations": [
+    {
+      "members": [
+        "S03",
+        "S08"
+      ],
+      "relation": "mcq_copy",
+      "ground_truth": "copied",
+      "note": "Copier_B repeats Copier_A's multiple-choice answers, wrong ones included.",
+      "source": "S03",
+      "questions": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7",
+        "q8",
+        "q9",
+        "q10"
+      ]
+    },
+    {
+      "members": [
+        "S03",
+        "S08"
+      ],
+      "relation": "light_edit_copy",
+      "ground_truth": "copied",
+      "note": "Near-identical text answers (a few words added or changed).",
+      "questions": [
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "members": [
+        "S03",
+        "S08"
+      ],
+      "relation": "code_renamed",
+      "ground_truth": "copied",
+      "note": "Same programs with every name changed.",
+      "questions": [
+        "q13",
+        "q14"
+      ]
+    },
+    {
+      "members": [
+        "S03",
+        "S01"
+      ],
+      "relation": "paraphrase",
+      "ground_truth": "copied",
+      "note": "Reworded_C rewords Copier_A's text answers.",
+      "questions": [
+        "q11",
+        "q12"
+      ]
+    },
+    {
+      "members": [
+        "S08",
+        "S01"
+      ],
+      "relation": "shared_text_source",
+      "ground_truth": "shared_source",
+      "note": "Both derive from Copier_A's text answers (Copier_B near-verbatim, Reworded_C reworded).",
+      "questions": [
+        "q11",
+        "q12"
+      ]
+    }
+  ]
+}

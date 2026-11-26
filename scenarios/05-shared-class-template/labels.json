@@ -1,0 +1,64 @@
+{
+  "scenario": "05-shared-class-template",
+  "default": {
+    "relation": "independent",
+    "ground_truth": "not_copied"
+  },
+  "participants": [
+    {
+      "id": "S01",
+      "role": "student",
+      "source_name": "Template_User_1"
+    },
+    {
+      "id": "S02",
+      "role": "student",
+      "source_name": "Template_User_2"
+    },
+    {
+      "id": "S03",
+      "role": "student",
+      "source_name": "Template_User_3"
+    },
+    {
+      "id": "S04",
+      "role": "student",
+      "source_name": "Template_User_6"
+    },
+    {
+      "id": "S05",
+      "role": "student",
+      "source_name": "Template_User_5"
+    },
+    {
+      "id": "S06",
+      "role": "student",
+      "source_name": "Template_User_4"
+    },
+    {
+      "id": "S07",
+      "role": "student",
+      "source_name": "Template_Control_1"
+    },
+    {
+      "id": "S08",
+      "role": "student",
+      "source_name": "Template_Control_2"
+    }
+  ],
+  "relations": [
+    {
+      "members": [
+        "S01",
+        "S02",
+        "S03",
+        "S06",
+        "S05",
+        "S04"
+      ],
+      "relation": "shared_template_sentence",
+      "ground_truth": "shared_source",
+      "note": "One identical sentence from a shared source inside otherwise original answers."
+    }
+  ]
+}

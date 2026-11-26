@@ -1,0 +1,184 @@
+{
+  "scenario": "07-ai-derived-answers",
+  "default": {
+    "relation": "independent",
+    "ground_truth": "not_copied"
+  },
+  "participants": [
+    {
+      "id": "S01",
+      "role": "student",
+      "source_name": "AI_Control_8"
+    },
+    {
+      "id": "S02",
+      "role": "ai_reference",
+      "source_name": "AI_CLAUDE"
+    },
+    {
+      "id": "S03",
+      "role": "student",
+      "source_name": "AI_Control_4"
+    },
+    {
+      "id": "S04",
+      "role": "student",
+      "source_name": "AI_Control_9"
+    },
+    {
+      "id": "S05",
+      "role": "student",
+      "source_name": "AI_CLAUDE_Copy_1"
+    },
+    {
+      "id": "S06",
+      "role": "student",
+      "source_name": "AI_CLAUDE_Paraphrased_1"
+    },
+    {
+      "id": "S07",
+      "role": "student",
+      "source_name": "AI_GEMINI_Copy_1"
+    },
+    {
+      "id": "S08",
+      "role": "student",
+      "source_name": "AI_CLAUDE_Copy_2"
+    },
+    {
+      "id": "S09",
+      "role": "student",
+      "source_name": "AI_Control_5"
+    },
+    {
+      "id": "S10",
+      "role": "student",
+      "source_name": "AI_Control_6"
+    },
+    {
+      "id": "S11",
+      "role": "student",
+      "source_name": "AI_Control_7"
+    },
+    {
+      "id": "S12",
+      "role": "student",
+      "source_name": "AI_Control_3"
+    },
+    {
+      "id": "S13",
+      "role": "student",
+      "source_name": "AI_GEMINI_Paraphrased_1"
+    },
+    {
+      "id": "S14",
+      "role": "student",
+      "source_name": "AI_Control_1"
+    },
+    {
+      "id": "S15",
+      "role": "student",
+      "source_name": "AI_CLAUDE_Paraphrased_2"
+    },
+    {
+      "id": "S16",
+      "role": "ai_reference",
+      "source_name": "AI_GEMINI"
+    },
+    {
+      "id": "S17",
+      "role": "student",
+      "source_name": "AI_Control_2"
+    },
+    {
+      "id": "S18",
+      "role": "student",
+      "source_name": "AI_GEMINI_Copy_2"
+    },
+    {
+      "id": "S19",
+      "role": "student",
+      "source_name": "AI_GEMINI_Paraphrased_2"
+    }
+  ],
+  "relations": [
+    {
+      "between": [
+        [
+          "S16"
+        ],
+        [
+          "S07",
+          "S18"
+        ]
+      ],
+      "relation": "ai_near_verbatim",
+      "ground_truth": "copied",
+      "note": "Near-verbatim copy of the AI reference answer."
+    },
+    {
+      "between": [
+        [
+          "S16"
+        ],
+        [
+          "S13",
+          "S19"
+        ]
+      ],
+      "relation": "ai_paraphrase",
+      "ground_truth": "copied",
+      "note": "Close paraphrase of the AI reference answer."
+    },
+    {
+      "members": [
+        "S07",
+        "S18",
+        "S13",
+        "S19"
+      ],
+      "relation": "shared_ai_source",
+      "ground_truth": "shared_source",
+      "note": "Both derive from the same AI answer; no evidence either copied the other."
+    },
+    {
+      "between": [
+        [
+          "S02"
+        ],
+        [
+          "S05",
+          "S08"
+        ]
+      ],
+      "relation": "ai_near_verbatim",
+      "ground_truth": "copied",
+      "note": "Near-verbatim copy of the AI reference answer."
+    },
+    {
+      "between": [
+        [
+          "S02"
+        ],
+        [
+          "S06",
+          "S15"
+        ]
+      ],
+      "relation": "ai_paraphrase",
+      "ground_truth": "copied",
+      "note": "Close paraphrase of the AI reference answer."
+    },
+    {
+      "members": [
+        "S05",
+        "S08",
+        "S06",
+        "S15"
+      ],
+      "relation": "shared_ai_source",
+      "ground_truth": "shared_source",
+      "note": "Both derive from the same AI answer; no evidence either copied the other."
+    }
+  ]
+}

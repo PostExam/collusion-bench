@@ -1,0 +1,65 @@
+{
+  "scenario": "04-function-word-decoy",
+  "default": {
+    "relation": "independent",
+    "ground_truth": "not_copied"
+  },
+  "participants": [
+    {
+      "id": "S01",
+      "role": "student",
+      "source_name": "Stop_Control_1"
+    },
+    {
+      "id": "S02",
+      "role": "student",
+      "source_name": "Stop_Control_2"
+    },
+    {
+      "id": "S03",
+      "role": "student",
+      "source_name": "Stop_CommonWords_A"
+    },
+    {
+      "id": "S04",
+      "role": "student",
+      "source_name": "Stop_Control_6"
+    },
+    {
+      "id": "S05",
+      "role": "student",
+      "source_name": "Stop_Control_7"
+    },
+    {
+      "id": "S06",
+      "role": "student",
+      "source_name": "Stop_Control_3"
+    },
+    {
+      "id": "S07",
+      "role": "student",
+      "source_name": "Stop_Control_4"
+    },
+    {
+      "id": "S08",
+      "role": "student",
+      "source_name": "Stop_CommonWords_B"
+    },
+    {
+      "id": "S09",
+      "role": "student",
+      "source_name": "Stop_Control_5"
+    }
+  ],
+  "relations": [
+    {
+      "members": [
+        "S03",
+        "S08"
+      ],
+      "relation": "decoy_function_words",
+      "ground_truth": "not_copied",
+      "note": "Similar only through shared function words; no real shared content."
+    }
+  ]
+}
