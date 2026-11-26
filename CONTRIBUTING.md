@@ -6,7 +6,7 @@ Thank you for helping. Contributions are pull requests against `main`.
 
 - **New scenarios**: another kind of copying, another question type, a larger class, another language.
 - **Corrections**: a wrong ground-truth entry, a typo, an answer that is not what its ground truth says.
-- **Script improvements**: for `validate.py`, `export_csv.py` and `expand_labels.py`.
+- **Script improvements**: for `validate.py`, `export_csv.py`, `scenario_tables.py` and `expand_labels.py`.
 
 ## Rules for data
 
@@ -30,6 +30,7 @@ Then run:
 ```
 pip install jsonschema
 python scripts/validate.py
+python scripts/scenario_tables.py scenarios/
 ```
 
 and fix everything it reports before opening the pull request.
