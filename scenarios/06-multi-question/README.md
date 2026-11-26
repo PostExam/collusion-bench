@@ -10,7 +10,7 @@ Four questions. Three pairs each match closely on a different subset of the ques
 
 ## The data at a glance
 
-The scenario as it looks in a Google Sheet when the responses are loaded: one row per student, one column per question. This is the same layout as the CSV export. The data itself is in `responses.jsonl`.
+The scenario as it looks in a Google Sheet when the responses are loaded: one row per student, one column per question. This is the same layout as the CSV export. You can select the table and paste it into a Google Sheet; if the paste does not come out right, use the CSV export instead. The data itself is in `responses.jsonl`.
 
 | Timestamp | Email | Name | Explain why the daytime sky looks blue. | Describe one cause of the French Revolution. | What is inflation? | Describe one role of the mitochondria in a cell. |
 |---|---|---|---|---|---|---|

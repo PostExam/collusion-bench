@@ -10,7 +10,7 @@ Twelve Python answers to one task: one program, a renamed copy, a renamed and re
 
 ## The data at a glance
 
-The scenario as it looks in a Google Sheet when the responses are loaded: one row per student, one column per question. This is the same layout as the CSV export. The data itself is in `responses.jsonl`.
+The scenario as it looks in a Google Sheet when the responses are loaded: one row per student, one column per question. This is the same layout as the CSV export. You can select the table and paste it into a Google Sheet; if the paste does not come out right, use the CSV export instead. The data itself is in `responses.jsonl`.
 
 | Timestamp | Email | Name | Write a Python function most_common_word(text) that returns the word that appears most often in a text. |
 |---|---|---|---|

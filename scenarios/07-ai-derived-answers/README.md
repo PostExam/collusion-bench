@@ -10,7 +10,7 @@ Two AI-style reference answers, each with two near-verbatim copies and two parap
 
 ## The data at a glance
 
-The scenario as it looks in a Google Sheet when the responses are loaded: one row per student, one column per question. This is the same layout as the CSV export. The data itself is in `responses.jsonl`.
+The scenario as it looks in a Google Sheet when the responses are loaded: one row per student, one column per question. This is the same layout as the CSV export. You can select the table and paste it into a Google Sheet; if the paste does not come out right, use the CSV export instead. The data itself is in `responses.jsonl`.
 
 | Timestamp | Email | Name | Explain how photosynthesis works. |
 |---|---|---|---|

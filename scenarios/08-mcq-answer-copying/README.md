@@ -10,7 +10,7 @@ A 30-question four-choice test taken by 20 students, with one copying pair and o
 
 ## The data at a glance
 
-The scenario as it looks in a Google Sheet when the responses are loaded: one row per student, one column per question. This is the same layout as the CSV export. The data itself is in `responses.jsonl`.
+The scenario as it looks in a Google Sheet when the responses are loaded: one row per student, one column per question. This is the same layout as the CSV export. You can select the table and paste it into a Google Sheet; if the paste does not come out right, use the CSV export instead. The data itself is in `responses.jsonl`.
 
 | Timestamp | Email | Name | Q1 | Q2 | Q3 | Q4 | Q5 | Q6 | Q7 | Q8 | Q9 | Q10 | Q11 | Q12 | Q13 | Q14 | Q15 | Q16 | Q17 | Q18 | Q19 | Q20 | Q21 | Q22 | Q23 | Q24 | Q25 | Q26 | Q27 | Q28 | Q29 | Q30 |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
