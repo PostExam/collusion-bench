@@ -6,7 +6,7 @@ A 30-question four-choice test taken by 20 students, with one copying pair and o
 - Questions: 30 (mcq)
 - Files: `responses.jsonl`, `questions.json`, `labels.json`
 
-## Labelled relations
+## Known relations (ground truth)
 
 Every pair not listed below is `independent` / `not_copied`.
 

@@ -6,7 +6,7 @@ A pair that reuses nearly the same words rearranged into different sentences, am
 - Questions: 1 (text)
 - Files: `responses.jsonl`, `questions.json`, `labels.json`
 
-## Labelled relations
+## Known relations (ground truth)
 
 Every pair not listed below is `independent` / `not_copied`.
 

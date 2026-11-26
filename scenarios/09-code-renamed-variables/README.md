@@ -6,7 +6,7 @@ Twelve Python answers to one task: one program, a renamed copy, a renamed and re
 - Questions: 1 (code)
 - Files: `responses.jsonl`, `questions.json`, `labels.json`
 
-## Labelled relations
+## Known relations (ground truth)
 
 Every pair not listed below is `independent` / `not_copied`.
 

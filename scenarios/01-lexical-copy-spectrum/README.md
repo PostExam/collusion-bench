@@ -6,7 +6,7 @@ Same-topic answers ranging from a verbatim copy, through a lightly edited copy a
 - Questions: 1 (text)
 - Files: `responses.jsonl`, `questions.json`, `labels.json`
 
-## Labelled relations
+## Known relations (ground truth)
 
 Every pair not listed below is `independent` / `not_copied`.
 

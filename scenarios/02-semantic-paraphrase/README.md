@@ -6,7 +6,7 @@ A verbatim copy pair, a pair that says the same thing in very different words, a
 - Questions: 1 (text)
 - Files: `responses.jsonl`, `questions.json`, `labels.json`
 
-## Labelled relations
+## Known relations (ground truth)
 
 Every pair not listed below is `independent` / `not_copied`.
 

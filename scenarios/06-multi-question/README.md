@@ -6,7 +6,7 @@ Four questions. Three pairs each match closely on a different subset of the ques
 - Questions: 4 (text)
 - Files: `responses.jsonl`, `questions.json`, `labels.json`
 
-## Labelled relations
+## Known relations (ground truth)
 
 Every pair not listed below is `independent` / `not_copied`.
 

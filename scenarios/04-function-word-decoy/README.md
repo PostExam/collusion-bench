@@ -6,7 +6,7 @@ A pair that looks similar only because both are full of common function words. T
 - Questions: 1 (text)
 - Files: `responses.jsonl`, `questions.json`, `labels.json`
 
-## Labelled relations
+## Known relations (ground truth)
 
 Every pair not listed below is `independent` / `not_copied`.
 

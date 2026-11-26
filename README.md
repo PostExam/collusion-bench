@@ -1,10 +1,74 @@
 # Post-Exam Collusion Analysis Benchmark
 
-Open, labelled exam-answer sets for testing methods that look for collusion **after an exam has been taken**. Nothing here is meant for use during an exam.
+Example exam answers, with the truth about who copied from whom, for testing methods that look for collusion and misconduct **after an exam has been taken**.
 
-The aim is a shared test bed: anyone can run a method (S2 for multiple choice, word-overlap or meaning-level similarity for text, code comparison, or something new) on the same data and compare it against known ground truth.
+**Status: version 0.1.0, a first release.** The data is synthetic: no real students. Results from a detector are indications to review, never proof of misconduct.
 
-**Status: version 0.1.0, a first release.** The data is synthetic. Results from a detector are indications to review, never proof of misconduct.
+## Background
+
+Google Forms is a popular way to give an exam or a test. Each student's submitted answers arrive in a Google Sheet, one row per student, one column per question. That sheet is the raw material for checking whether the exam was taken honestly.
+
+Some students cheat. Typical misconduct includes:
+
+- copying from a classmate, word for word or with a few changes;
+- sharing answers with others during the test, in person or by chatting outside the exam;
+- searching Google, or asking an AI assistant, and pasting or rewording the result;
+- using the same study guide or class notes and reproducing a shared passage.
+
+A teacher cannot read every pair of answers in a class. So there is ongoing work, including software, on analysing the submitted answers automatically for signs of collusion and misconduct, and listing the cases worth a closer look.
+
+## Question types
+
+Google Forms assessments can have several different question types: multiple choice (MCQ), short answer, long answer and computer code. The best analysis strategy differs by type. For multiple choice, the useful signal is how many wrong answers two students share; for written answers it is how much of the wording or meaning they share; for code it is the program's structure once names are changed.
+
+Tools such as the Academic Integrity Toolkit (AIT) try to work out each question's type by themselves. To be completely safe, this repository states it explicitly, so no method has to guess:
+
+- **Where:** in `questions.json`, inside each scenario folder (`scenarios/<scenario>/questions.json`).
+- **How:** every question has a `type` field with one of three values: `mcq` (multiple choice, which also carries `choices` and the `answer_key`), `text` (short and long written answers; both are `text`) and `code` (computer code).
+
+```json
+{ "id": "q1", "type": "mcq", "choices": ["A", "B", "C", "D"], "answer_key": "B", ... }
+```
+
+Questions are matched to students' answers by `id` (`q1`, `q2`, ...), as the keys of `answers` in `responses.jsonl`.
+
+If you use the CSV export, the type is not in the CSV itself. Running `scripts/export_csv.py` with `--column-notes` writes a `<scenario>.column-notes.txt` file, in which each column is tagged in the AIT format, for example `<AIT-type=MCQ>B`, `<AIT-type=TEXT>` or `<AIT-type=CODE>`. These are the tags the add-on keeps as notes on the header cells in row 1 of the sheet. See "Getting the CSV files" below.
+
+## The problem this repository addresses
+
+To trust a detection method, you need to know how well it works. Does it find real copying? Does it wrongly flag students who only gave similar answers because they answered the same question honestly? Today there is no common set of examples to measure that, so methods are rarely tested against each other, and a method's authors usually test it on data they made themselves.
+
+This repository is that common set. It contains exam answers made so that **the truth is known**: for every pair of students, whether their answers are independent, copied, or derived from a shared source, and how. Anyone can run a method on the data, compare its findings with the known truth, and report the result. Because the truth is public, the results can be checked, and different methods can be compared fairly.
+
+## What it contains
+
+Ten small scenarios, each a made-up class taking a short exam (8 to 20 students). Each scenario stands for a kind of misconduct, or for an innocent look-alike that a good method must not flag:
+
+| What the student did | What shows up in the answers | Scenarios |
+|---|---|---|
+| Copied a classmate word for word | Identical text | 01, 02, 06, 10 |
+| Copied and changed a few words | Almost identical text | 01, 10 |
+| Copied and reworded it | Same meaning, different words | 02, 10 |
+| Rearranged someone else's words | Same words in a different order | 03 |
+| Shared multiple-choice answers, wrong ones included | Many matching wrong answers | 08, 10 |
+| Copied a program and renamed the variables | Same program, different names | 09, 10 |
+| Used an AI assistant | Close copies and paraphrases of one AI answer | 07 |
+| Used the same web page, study guide or class notes | The same sentence in many answers | 05 |
+| **Innocent look-alikes, not misconduct** | Common words, or an honest shared topic | 04, and the independent students in every scenario |
+
+The list of scenarios, with the exact pairs involved, is below.
+
+## What it does not contain
+
+The data holds the answers only. It does not hold how the students produced them: no timing, no keystrokes, no browser or chat records. A Google search, an AI assistant, or a chat message appears here only through its **effect**, similar answers. So the benchmark tests whether a method can **reveal misconduct from the surrounding data, the answers themselves**, not whether it can observe the act. It also cannot say whether similar answers are cheating: a shared source, for example, may be innocent. The truth recorded here describes how the data was built.
+
+## What you can do with it
+
+- **Developers** of a detection method (S2 for multiple choice, word-overlap or meaning-level similarity for text, code comparison, or a new idea): run it on the scenarios and measure how many of the known cases it finds and how many innocent pairs it flags.
+- **Teachers and institutions** evaluating a tool: try it on data where you know the right answer before trusting it on a real class.
+- **Researchers**: cite a fixed, versioned dataset, reproduce each other's results and extend it with new scenarios by pull request.
+
+A first run takes a few minutes: pick a scenario folder, read its `README.md` to see what is in it and which pairs are related, run your method on `responses.jsonl` (or on a CSV export, see below), then compare its findings with the known relations.
 
 ## Disclosure
 
@@ -33,7 +97,7 @@ Each scenario folder has its own README listing exactly which pairs are related 
 scenarios/<scenario>/
   responses.jsonl   one JSON object per student: id, name, email, timestamp, answers
   questions.json    each question: id, header, type (text | mcq | code), plus choices and answer_key for mcq
-  labels.json       participants and the ground-truth relations between them
+  labels.json       the ground truth: which students' answers are related, and how
 schemas/            JSON Schemas for the three files
 scripts/            validate.py, export_csv.py, expand_labels.py
 ```
@@ -46,7 +110,7 @@ Student names and emails are neutral (`Student 07`, `s07@example.edu`). The orde
 
 ## Ground truth
 
-`labels.json` lists the participants and the relations between them. A pair that is not listed gets the scenario default: `independent` / `not_copied`. Run `python scripts/expand_labels.py scenarios/<scenario>` to get one row per pair.
+The ground truth is the set of known facts about which students' answers are related and how. We know them because we built the data that way. It is stored in `labels.json`, which lists the participants and the relations between them. A pair that is not listed gets the scenario default: `independent` / `not_copied`. Run `python scripts/expand_labels.py scenarios/<scenario>` to get one row per pair.
 
 Ground truth, per pair:
 
@@ -70,7 +134,7 @@ Relation, per pair:
 | `ai_near_verbatim` | A near-verbatim copy of an AI-style reference answer (the pair includes the reference). |
 | `ai_paraphrase` | A close paraphrase of an AI-style reference answer (the pair includes the reference). |
 | `shared_ai_source` | Two submissions derived from the same AI-style answer. |
-| `mcq_copy` | Multiple-choice answers copied from a source student, wrong answers included. The label names the source. |
+| `mcq_copy` | Multiple-choice answers copied from a source student, wrong answers included. The entry names the source. |
 | `mcq_shared_source` | Two students who each copied the same third student. |
 | `code_renamed` | The same program with identifiers renamed. |
 | `code_reformatted` | The same program with new names and different comments and spacing. |
@@ -79,7 +143,7 @@ Relation, per pair:
 | `shared_text_source` | Two submissions each derived from the same third student's text. |
 | `independent` | Independent answers (the default for every pair not listed). |
 
-A relation may carry `questions` (the questions it applies to) and `source` (who copied whom, for multiple choice). A pair may have several relations, each for different questions, as in the mixed-exam scenario; a relation without `questions` applies to every question. Labels describe how the data was constructed, not anyone's intent.
+A relation may carry `questions` (the questions it applies to) and `source` (who copied whom, for multiple choice). A pair may have several relations, each for different questions, as in the mixed-exam scenario; a relation without `questions` applies to every question. The ground truth describes how the data was constructed, not anyone's intent.
 
 ## Using the data
 
@@ -90,7 +154,12 @@ with open("scenarios/08-mcq-answer-copying/responses.jsonl", encoding="utf-8") a
 print(students[0]["answers"]["q1"])
 ```
 
-To load a scenario into a spreadsheet, export it to CSV in the layout of a Google Forms response sheet:
+## Getting the CSV files
+
+The repository holds the data as JSON Lines, which is the source of truth. CSV files in the layout of a Google Forms response sheet are generated from it, so a scenario can be loaded into a spreadsheet. There are two ways to get them:
+
+1. **From GitHub, without installing anything.** Open the **Actions** tab, click the latest **validate** run, and on its **Summary** page scroll to **Artifacts**. Download `csv-exports`: a zip with one CSV per scenario. You need to be signed in to GitHub, and GitHub deletes artifacts after a retention period, so treat this as a convenience.
+2. **On your own computer.** With Python 3 installed, in the repository folder run:
 
 ```
 python scripts/export_csv.py scenarios out/
@@ -98,18 +167,27 @@ python scripts/export_csv.py scenarios out/
 
 Add `--column-notes` to also write, for each scenario, a text file naming every question column's type and the multiple-choice answer key. The tag format in it is that of the Academic Integrity Toolkit add-on, which stores question types as notes on the header cells; other tools can ignore the file.
 
+Never edit the CSVs by hand: change the JSONL files and export again.
+
 ## Checking your changes
+
+Every scenario is checked automatically. The check (`scripts/validate.py`, started by `.github/workflows/validate.yml`) runs on every push and every pull request, and reports on the commit or pull request:
+
+- a **green tick** means all scenarios passed: the files are valid, their ids match, every answer belongs to a declared question, multiple-choice answers are valid letters, and every ground-truth entry points to a student that exists;
+- a **red cross** means a problem. Click it, open the **validate** job, and read the step **Run python scripts/validate.py** for the exact lines.
+
+You can also run it yourself before opening a pull request:
 
 ```
 pip install jsonschema
 python scripts/validate.py
 ```
 
-The same check runs automatically on every push and pull request.
+It should end with `N scenario(s) checked, 0 problem(s)`.
 
 ## Evaluating a method
 
-This release contains data and labels only. A scoring script and baseline results are planned. Until then, report per scenario, at a stated false-positive rate: how many of the labelled `copied` pairs a method finds, and how it ranks them. Say how the method was run, including every setting. Do not tune a method on the labels of a scenario and then report that scenario as a test.
+This release contains data and ground truth only. A scoring script and baseline results are planned. Until then, report per scenario, at a stated false-positive rate: how many of the pairs whose ground truth is `copied` a method finds, and how it ranks them. Say how the method was run, including every setting. Do not tune a method on the labels of a scenario and then report that scenario as a test.
 
 ## Limitations
 
@@ -135,4 +213,4 @@ New scenarios and corrections are welcome as pull requests. See [CONTRIBUTING.md
 
 ## Citation
 
-See [CITATION.cff](CITATION.cff), or use the "Cite this repository" button on GitHub.
+See [CITATION.cff](CITATION.cff), or use the "Cite this repository" button on GitHub. Please also state the version of the benchmark you used (shown in `CITATION.cff` and on the Releases page).

@@ -6,7 +6,7 @@ Two AI-style reference answers, each with two near-verbatim copies and two parap
 - Questions: 1 (text)
 - Files: `responses.jsonl`, `questions.json`, `labels.json`
 
-## Labelled relations
+## Known relations (ground truth)
 
 Every pair not listed below is `independent` / `not_copied`.
 

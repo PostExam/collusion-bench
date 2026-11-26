@@ -6,7 +6,7 @@ Fourteen questions (ten multiple choice, two text, two code) answered by 11 stud
 - Questions: 14 (code, mcq, text)
 - Files: `responses.jsonl`, `questions.json`, `labels.json`
 
-## Labelled relations
+## Known relations (ground truth)
 
 Every pair not listed below is `independent` / `not_copied`.
 
